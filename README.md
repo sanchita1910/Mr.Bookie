@@ -54,13 +54,13 @@ The greenfield spec **Book Finder Full-Stack** (Google Books + `client/` / `serv
 
 **How this app differs from that plan**
 
-| Plan (v1 spec) | Current Mr.Bookie |
-|----------------|-------------------|
-| Google Books search + API key | **Open Library** (no key for basic search) |
-| `client/` + `server/`, TypeScript | `frontend/` + `backend/`, **JavaScript** |
-| `saved_books` keyed by Google volume id | **`books`** table with ratings, notes, OL work key, page cache |
-| `/api/saved` | **REST on `/api/books`** (full CRUD) |
-| — | **Mood**, **what to read next**, **similar + AI**, **companion (Yap)** |
+| Plan (v1 spec)                          | Current Mr.Bookie                                                      |
+| --------------------------------------- | ---------------------------------------------------------------------- |
+| Google Books search + API key           | **Open Library** (no key for basic search)                             |
+| `client/` + `server/`, TypeScript       | `frontend/` + `backend/`, **JavaScript**                               |
+| `saved_books` keyed by Google volume id | **`books`** table with ratings, notes, OL work key, page cache         |
+| `/api/saved`                            | **REST on `/api/books`** (full CRUD)                                   |
+| —                                       | **Mood**, **what to read next**, **similar + AI**, **companion (Yap)** |
 
 ---
 
