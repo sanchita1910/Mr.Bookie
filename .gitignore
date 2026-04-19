@@ -1,0 +1,21 @@
+# Books app — root ignore (only backend/ + frontend/ are tracked intentionally)
+
+# Dependencies & build
+**/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+
+# Secrets & local data
+.env
+**/.env
+backend/data/*.db
+
+# OS / editor
+.DS_Store
+*.log
+
+# Everything else in this folder is not part of the books app repo
+*.docx
+*.pdf
+sanchita_task1/
+github/
