@@ -8,26 +8,26 @@ Full-stack app to track books, search **Open Library**, get **AI-assisted** sugg
 
 ```mermaid
 flowchart TB
-  subgraph browser [Browser]
+  subgraph browser ["Browser"]
     UI["Vite + React UI"]
   end
 
-  subgraph express [Express API]
-    B["Books routes: CRUD, OL search, mood, similar, companion"]
-    R["Reading routes: next-read solver"]
-    Mood["sentiment package (lexicon)"]
+  subgraph express ["Express API"]
+    B["Books routes"]
+    R["Reading routes"]
+    Mood["sentiment lexicon"]
     Solver["readingNextSolver"]
-    LLM["LLM modules + OpenAI client"]
+    LLM["LLM + OpenAI client"]
   end
 
-  subgraph data [(SQLite)]
-    T1[(books)]
-    T2[(companion_cache)]
+  subgraph sqlite_layer ["SQLite"]
+    T1["books table"]
+    T2["companion_cache table"]
   end
 
-  subgraph external [External HTTP]
+  subgraph external ["External HTTP"]
     OL["Open Library"]
-    OAI["OpenAI optional"]
+    OAI["OpenAI"]
   end
 
   UI -->|"VITE_API_URL or dev proxy"| B
